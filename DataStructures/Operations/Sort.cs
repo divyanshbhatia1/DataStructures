@@ -82,6 +82,8 @@ namespace DataStructures.Operations
 			return localArray;
 		}
 
+		#region Merge Sort
+
 		public static int[] MergeSort(int[] array)
 		{
 			var localArray = Copy(array);
@@ -157,6 +159,22 @@ namespace DataStructures.Operations
 			}
 		}
 
+		#endregion
+
+		public static int[] HeapSort(int[] array)
+		{
+			var localArray = Copy(array);
+
+			for(int i = 0; i < localArray.Length; i ++)
+			{
+				Console.Write(localArray[i] + "\t");
+			}
+
+			return localArray;
+		}
+
+		#region Utilities
+
 		private static int[] Copy(int[] array)
 		{
 			int[] localarray = new int[array.Length];
@@ -172,5 +190,7 @@ namespace DataStructures.Operations
 			array[index1] = array[index2];
 			array[index2] = temp;
 		}
+
+		#endregion
 	}
 }
