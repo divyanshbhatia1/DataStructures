@@ -4,7 +4,21 @@ using System.Text;
 
 namespace DataStructures.DataStructures
 {
-	public class DS_LinkedList<T>
+	public interface IDS_LinkedList<T>
+	{
+		int Length { get; }
+
+		void AddAfterMiddle(T data);
+		void AddFirst(T data);
+		void AddLast(T data);
+		void RemoveAfterMiddle();
+		void RemoveFirst();
+		void RemoveLast();
+		void RemoveWhere(T data);
+		void Traverse();
+	}
+
+	public class DS_LinkedList<T> : IDS_LinkedList<T>
 	{
 		private Node<T> Head { get; set; }
 
@@ -74,7 +88,7 @@ namespace DataStructures.DataStructures
 
 			var node = Head;
 
-			while(node.Next.Next != null)
+			while (node.Next.Next != null)
 			{
 				node = node.Next;
 			}
@@ -91,16 +105,16 @@ namespace DataStructures.DataStructures
 
 		public void RemoveWhere(T data)
 		{
-			if(Head.Data.Equals(data))
+			if (Head.Data.Equals(data))
 			{
 				RemoveFirst();
 			}
 
 			var node = Head;
 
-			while(node != null && node.Next != null)
+			while (node != null && node.Next != null)
 			{
-				if(node.Next.Data.Equals(data))
+				if (node.Next.Data.Equals(data))
 				{
 					node.Next = node.Next.Next;
 				}
@@ -115,7 +129,7 @@ namespace DataStructures.DataStructures
 			{
 				int count = 0;
 				var node = Head;
-				while(node != null)
+				while (node != null)
 				{
 					count++;
 					node = node.Next;

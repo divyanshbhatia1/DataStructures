@@ -1,6 +1,7 @@
 ﻿using DataStructures.DataStructures;
 using DataStructures.Operations;
 using System;
+using System.Collections;
 
 namespace DataStructures
 {
@@ -38,19 +39,51 @@ namespace DataStructures
 
 			//linkedList.AddLast(15);
 
+			//linkedList.RemoveAfterMiddle();
+
+			//linkedList.Traverse();
+
 			//linkedList.AddAfterMiddle(11);
 
 			//Console.WriteLine(linkedList.Length);
 
-			var stack = new DS_Stack<int>(4);
+			//var stack = new DS_Stack<int>(4);
 
-			stack.Push(1);
+			//stack.Push(1);
 
-			stack.Push(2);
+			//stack.Push(2);
 
-			Console.WriteLine("Popped: " + stack.Pop());
+			//Console.WriteLine("Popped: " + stack.Pop());
 
-			Console.WriteLine(stack);
+			//Console.WriteLine(stack);
+
+			//var queue = new DS_Queue<int>(4);
+
+			//queue.Push(1);
+			//queue.Push(2);
+			//queue.Push(3);
+			//queue.Push(4);
+
+			//Console.WriteLine(queue.Pop());
+
+			//Console.WriteLine(queue);
+
+			var tree = new DS_Tree<int>();
+
+			tree.Add(10);
+			tree.Add(6);
+			tree.Add(15);
+			tree.Add(2);
+			tree.Add(12);
+			tree.Add(20);
+
+			tree.Tranverse();
+
+			Console.WriteLine("\n---------------------------------");
+
+			tree.Delete(2);
+
+			tree.Tranverse();
 		}
 	}
 }
