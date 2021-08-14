@@ -77,13 +77,23 @@ namespace DataStructures
 			tree.Add(12);
 			tree.Add(20);
 
-			tree.Tranverse();
+			tree.TraversePostOrder();
 
-			Console.WriteLine("\n---------------------------------");
+			//Console.WriteLine("\n---------------------------------");
 
-			tree.Delete(2);
+			//tree.Delete(2);
 
-			tree.Tranverse();
+			//tree.Tranverse();
+
+			//var circularLinkedList = new DS_CircularLinkedList<int>();
+
+			//circularLinkedList.AddFirst(3);
+
+			////circularLinkedList.AddFirst(4);
+
+			////circularLinkedList.AddFirst(90);
+
+			//circularLinkedList.Traverse();
 		}
 	}
 }

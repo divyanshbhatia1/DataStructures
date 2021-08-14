@@ -39,10 +39,9 @@ namespace DataStructures.DataStructures
 		{
 			var node = new Node<T>()
 			{
-				Data = data
+				Data = data,
+				Next = Head
 			};
-
-			node.Next = Head;
 
 			Head = node;
 		}
@@ -177,10 +176,10 @@ namespace DataStructures.DataStructures
 			return node;
 		}
 
-		private class Node<TNode>
-		{
-			public TNode Data { get; set; }
-			public Node<TNode> Next { get; set; }
-		}
+	}
+	public class Node<TNode>
+	{
+		public TNode Data { get; set; }
+		public Node<TNode> Next { get; set; }
 	}
 }

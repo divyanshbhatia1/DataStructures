@@ -20,11 +20,27 @@ namespace DataStructures.DataStructures
 			Root.Add(data);
 		}
 
-		public void Tranverse()
+		public void TranverseInOrder()
 		{
 			if (Root != null)
 			{
 				Root.TraverseInOrder();
+			}
+		}
+
+		public void TraversePreOrder()
+		{
+			if(Root != null)
+			{
+				Root.TraversePreOrder();
+			}
+		}
+
+		public void	TraversePostOrder()
+		{
+			if(Root != null)
+			{
+				Root.TraversePostOrder();
 			}
 		}
 
@@ -169,6 +185,32 @@ namespace DataStructures.DataStructures
 			{
 				RightChild.TraverseInOrder();
 			}
+		}
+
+		public void TraversePreOrder()
+		{
+			Console.Write($"{Data}, ");
+			if (LeftChild != null)
+			{
+				LeftChild.TraversePreOrder();
+			}
+			if (RightChild != null)
+			{
+				RightChild.TraversePreOrder();
+			}
+		}
+
+		public void TraversePostOrder()
+		{
+			if (LeftChild != null)
+			{
+				LeftChild.TraversePostOrder();
+			}
+			if (RightChild != null)
+			{
+				RightChild.TraversePostOrder();
+			}
+			Console.Write($"{Data}, ");
 		}
 
 		public DS_TreeNode<TNode> Search(TNode data)
